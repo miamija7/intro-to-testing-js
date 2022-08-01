@@ -14,6 +14,7 @@ describe('helloWorld', function() {
     });
 });
 
+//Exercise #1
 describe ('sayHello', function (){
     it('should be a defined function', function () {
         expect(typeof sayHello).toBe('function');
