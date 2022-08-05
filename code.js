@@ -22,3 +22,13 @@ function isEven(input) {
     else
         return input % 2 === 0;
 }
+
+function isVowel(input){
+    let vowels = 'aeiou';
+    if (!!input && typeof input == 'string' && vowels.includes(input.toLowerCase()))
+        return true;
+    else
+        return false;
+
+
+}

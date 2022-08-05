@@ -57,7 +57,7 @@ describe ('sayHello', function (){
     it ('should return "Hello, World!" from sayHello(array);', function(){
         expect(sayHello(array)).toBe("Hello, World!");
     });
-})
+});
 
 describe('isFive', function(){
     it('should be a defined function', function() {
@@ -72,7 +72,7 @@ describe('isFive', function(){
     it ('should return true from isFive("5");', function() {
         expect(isFive("5")).toBe(true);
     });
-})
+});
 
 describe('isEven', function(){
     it('should be a defined function', function(){
@@ -108,4 +108,40 @@ describe('isEven', function(){
     it ('should return false from isEven();', function (){
         expect(isEven()).toBe(false);
     });
-})
+});
+
+describe('isVowel', function () {
+    it ('should be a defined function', function() {
+       expect(typeof isVowel).toBe('function');
+    });
+    it ('should return a boolean', function() {
+        expect(typeof (isVowel())).toBe('boolean');
+    });
+    it ('should return a true from isVowel("a")', function() {
+        expect(isVowel("a")).toBe(true);
+    });
+    it ('should return a true from isVowel("A")', function() {
+        expect(isVowel("A")).toBe(true);
+    });
+    it ('should return a false from isVowel("y")', function() {
+        expect(isVowel("y")).toBe(false);
+    });
+    it ('should return a false from isVowel(4)', function() {
+        expect(isVowel(4)).toBe(false);
+    });
+    it ('should return a false from isVowel("4")', function() {
+        expect(isVowel("4")).toBe(false);
+    });
+    it ('should return a false from isVowel(true)', function() {
+        expect(isVowel(true)).toBe(false);
+    });
+    it ('should return a false from isVowel(false)', function() {
+        expect(isVowel(false)).toBe(false);
+    });
+    it ('should return a false from isVowel("banana")', function() {
+        expect(isVowel("banana")).toBe(false);
+    });
+    it ('should return a false from isVowel()', function() {
+        expect(isVowel()).toBe(false);
+    });
+});
