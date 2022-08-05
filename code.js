@@ -9,6 +9,9 @@ function sayHello(name) {
     else
         return "Hello, World!";
 }
-
 let obj = {};
 let array = [];
+
+function isFive(input) {
+    return input == 5;
+}
