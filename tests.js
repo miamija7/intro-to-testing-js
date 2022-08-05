@@ -22,13 +22,40 @@ describe ('sayHello', function (){
     it ('should return a string when called', function (){
         expect(typeof sayHello()).toBe('string');
     });
-    it ('sayHello("Jane"); should return "Hello, Jane!"', function() {
+    it ('should return "Hello, Jane!" from sayHello("Jane");', function() {
         expect(sayHello("Jane")).toBe("Hello, Jane!");
     });
-    it ('sayHello("Alex"); should return "Hello, Alex!"', function(){
+    it ('should return "Hello, Alex!" from sayHello("Alex");', function(){
         expect(sayHello("Alex")).toBe("Hello, Alex!");
     });
-    it ('sayHello("Pat");should return "Hello, Pat!"', function(){
+    it ('should return "Hello, Pat!" from sayHello("Pat");', function(){
         expect(sayHello("Pat")).toBe("Hello, Pat!");
-    })
+    });
+    it ('should return "Hello, World!" from sayHello();', function(){
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it ('should return "Hello, World!" from sayHello(true);', function(){
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it ('should return "Hello World!" from sayHello(false);', function(){
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it ('should return "Hello, World!" from sayHello(null);', function(){
+        expect(sayHello(null)).toBe("Hello, World!");
+    });
+    it ('should return "Hello, World!" from sayHello("");', function(){
+        expect(sayHello("")).toBe("Hello, World!");
+    });
+    it ('should return "Hello, World!" from sayHello(2.5);', function(){
+        expect(sayHello(2.5)).toBe("Hello, World!");
+    });
+    it ('should return "Hello, World!" from sayHello("5");', function(){
+        expect(sayHello("5")).toBe("Hello, World!");
+    });
+    it ('should return "Hello, World!" from sayHello(obj);', function(){
+        expect(sayHello(obj)).toBe("Hello, World!");
+    });
+    it ('should return "Hello, World!" from sayHello(array);', function(){
+        expect(sayHello(array)).toBe("Hello, World!");
+    });
 })
