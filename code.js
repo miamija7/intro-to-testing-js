@@ -3,8 +3,6 @@ const helloWorld = function () {
     return "Hello, World!";
 }
 
-function sayHello(name) {           //Exercise #1
-    return `Hello, ${name}!`;       //Exercise #2
+function sayHello(name) {
+    return `Hello, ${name}!`;
 }
-
-sayHello("Jane");             //Exercise #3
