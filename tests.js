@@ -14,7 +14,6 @@ describe('helloWorld', function() {
     });
 });
 
-//Exercise #1
 describe ('sayHello', function (){
     it('should be a defined function', function () {
         expect(typeof sayHello).toBe('function');
@@ -60,7 +59,6 @@ describe ('sayHello', function (){
     });
 })
 
-
 describe('isFive', function(){
     it('should be a defined function', function() {
         expect(typeof isFive).toBe('function');
@@ -73,5 +71,41 @@ describe('isFive', function(){
     });
     it ('should return true from isFive("5");', function() {
         expect(isFive("5")).toBe(true);
+    });
+})
+
+describe('isEven', function(){
+    it('should be a defined function', function(){
+        expect(typeof isEven).toBe('function');
+    });
+    it ('should return a boolean', function() {
+        expect(typeof (isFive())).toBe('boolean');
+    });
+    it ('should return true from isEven(2);', function (){
+        expect(isEven(2)).toBe(true);
+    });
+    it ('should return true from isEven(-4);', function (){
+        expect(isEven(-4)).toBe(true);
+    });
+    it ('should return false from isEven(3);', function (){
+        expect(isEven(3)).toBe(false);
+    });
+    it ('should return false from isEven("banana");', function (){
+        expect(isEven("banana")).toBe(false);
+    });
+    it ('should return true from isEven("8");', function (){
+        expect(isEven("8")).toBe(true);
+    });
+    it ('should return false from isEven(Infinity);', function (){
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it ('should return false from isEven(true);', function (){
+        expect(isEven(true)).toBe(false);
+    });
+    it ('should return false from isEven(false);', function (){
+        expect(isEven(false)).toBe(false);
+    });
+    it ('should return false from isEven();', function (){
+        expect(isEven()).toBe(false);
     });
 })
