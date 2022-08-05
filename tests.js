@@ -171,5 +171,4 @@ describe('add', function() {
     it ('should return NaN from add();', function() {
             expect(add()).toBeNaN();
     });
-
 });

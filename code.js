@@ -17,18 +17,12 @@ function isFive(input) {
 }
 
 function isEven(input) {
-    if (typeof input === 'boolean')
-        return false;
-    else
-        return input % 2 === 0;
+    return (input % 2 === 0 && typeof input !== 'boolean');
 }
 
 function isVowel(input){
     let vowels = 'aeiou';
-    if (!!input && typeof input == 'string' && vowels.includes(input.toLowerCase()))
-        return true;
-    else
-        return false;
+    return (!!input && typeof input == 'string' && vowels.includes(input.toLowerCase()))
 }
 
 function add(input1, input2){
