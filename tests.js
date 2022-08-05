@@ -117,31 +117,59 @@ describe('isVowel', function () {
     it ('should return a boolean', function() {
         expect(typeof (isVowel())).toBe('boolean');
     });
-    it ('should return a true from isVowel("a")', function() {
+    it ('should return a true from isVowel("a");', function() {
         expect(isVowel("a")).toBe(true);
     });
-    it ('should return a true from isVowel("A")', function() {
+    it ('should return a true from isVowel("A");', function() {
         expect(isVowel("A")).toBe(true);
     });
-    it ('should return a false from isVowel("y")', function() {
+    it ('should return a false from isVowel("y");', function() {
         expect(isVowel("y")).toBe(false);
     });
-    it ('should return a false from isVowel(4)', function() {
+    it ('should return a false from isVowel(4);', function() {
         expect(isVowel(4)).toBe(false);
     });
-    it ('should return a false from isVowel("4")', function() {
+    it ('should return a false from isVowel("4");', function() {
         expect(isVowel("4")).toBe(false);
     });
-    it ('should return a false from isVowel(true)', function() {
+    it ('should return a false from isVowel(true);', function() {
         expect(isVowel(true)).toBe(false);
     });
-    it ('should return a false from isVowel(false)', function() {
+    it ('should return a false from isVowel(false);', function() {
         expect(isVowel(false)).toBe(false);
     });
-    it ('should return a false from isVowel("banana")', function() {
+    it ('should return a false from isVowel("banana");', function() {
         expect(isVowel("banana")).toBe(false);
     });
-    it ('should return a false from isVowel()', function() {
+    it ('should return a false from isVowel();', function() {
         expect(isVowel()).toBe(false);
     });
+});
+
+describe('add', function() {
+    it ('should be a defined function', function() {
+        expect(typeof add).toBe('function');
+    });
+    it ('should return 5 from add(2, 3);', function() {
+        expect(add(2, 3)).toBe(5);
+    });
+    it ('should return 5 from add(-3, -9);', function() {
+        expect(add(-3, -9)).toBe(-12);
+    });
+    it ('should return 11 from add("5", 6);', function() {
+        expect(add("5", 6)).toBe(11);
+    });
+    it ('should return 6 from add("-4", "10");', function() {
+        expect(add("-4", "10")).toBe(6);
+    });
+    it ('should return NaN from add("banana", "split");', function() {
+        expect(add("banana", "split")).toBeNaN();
+    });
+    it ('should return NaN from add(2, "apples");', function() {
+        expect(add(2, "apples")).toBeNaN();
+    });
+    it ('should return NaN from add();', function() {
+            expect(add()).toBeNaN();
+    });
+
 });
